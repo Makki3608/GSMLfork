@@ -3,12 +3,12 @@
 // @namespace    https://github.com/Makki3608
 // @version      1.0.9
 // @description  Allows you to run multiple different google snake mods
-// @author       DarkSnakeGang (https://github.com/DarkSnakeGang)
-// @icon         https://github.com/DarkSnakeGang/GoogleSnakeIcons/blob/main/Extras/snake_logo.png?raw=true
+// @author       DarkSnakeGang (https://github.com/Makki3608)
+// @icon         https://github.com/Makki3608/GSMLfork/blob/main/Extras/snake_logo.png?raw=true
 // @run-at       document-body
 // @grant        none
-// @updateURL    https://github.com/DarkSnakeGang/GoogleSnakeModLoader/raw/main/build/snake-mod-loader-standard.meta.js
-// @downloadURL  https://github.com/DarkSnakeGang/GoogleSnakeModLoader/raw/main/build/snake-mod-loader-standard.user.js
+// @updateURL    https://github.com/Makki3608/GSMLfork/raw/main/build/snake-mod-loader-standard.meta.js
+// @downloadURL  https://github.com/Makki3608/GSMLfork/raw/main/build/snake-mod-loader-standard.user.js
 // @include      /^https:\/\/(www\.)?google\.(com|ad|ae|com\.af|com\.ag|com\.ai|al|am|co\.ao|com\.ar|as|at|com\.au|az|ba|com\.bd|be|bf|bg|com\.bh|bi|bj|com\.bn|com\.bo|com\.br|bs|bt|co\.bw|by|com\.bz|ca|cd|cf|cg|ch|ci|co\.ck|cl|cm|cn|com\.co|co\.cr|com\.cu|cv|com\.cy|cz|de|dj|dk|dm|com\.do|dz|com\.ec|ee|com\.eg|es|com\.et|fi|com\.fj|fm|fr|ga|ge|gg|com\.gh|com\.gi|gl|gm|gr|com\.gt|gy|com\.hk|hn|hr|ht|hu|co\.id|ie|co\.il|im|co\.in|iq|is|it|je|com\.jm|jo|co\.jp|co\.ke|com\.kh|ki|kg|co\.kr|com\.kw|kz|la|com\.lb|li|lk|co\.ls|lt|lu|lv|com\.ly|co\.ma|md|me|mg|mk|ml|com\.mm|mn|ms|com\.mt|mu|mv|mw|com\.mx|com\.my|co\.mz|com\.na|com\.ng|com\.ni|ne|nl|no|com\.np|nr|nu|co\.nz|com\.om|com\.pa|com\.pe|com\.pg|com\.ph|com\.pk|pl|pn|com\.pr|ps|pt|com\.py|com\.qa|ro|ru|rw|com\.sa|com\.sb|sc|se|com\.sg|sh|si|sk|com\.sl|sn|so|sm|sr|st|com\.sv|td|tg|co\.th|com\.tj|tl|tm|tn|to|com\.tr|tt|com\.tw|co\.tz|com\.ua|co\.ug|co\.uk|com\.uy|co\.uz|com\.vc|co\.ve|vg|co\.vi|com\.vn|vu|ws|rs|co\.za|co\.zm|co\.zw|cat)\/search.*(snake|serpiente|serpent|serpente|%E8%B4%AA%E5%90%83%E8%9B%87|%E0%A4%B8%E0%A4%BE%E0%A4%81%E0%A4%AA|%D8%AB%D8%B9%D8%A8%D8%A7%D9%86|%D0%B7%D0%BC%D0%B5%D0%B9%D0%BA%D0%B0|%E3%83%98%E3%83%93%E3%82%B2%E3%83%BC%E3%83%A0|%E0%A4%B8%E0%A4%BE%E0%A4%AA|y%C4%B1lan|%E0%AE%AA%E0%AE%BE%E0%AE%AE%E0%AF%8D%E0%AE%AA%E0%AF%81|r%E1%BA%AFn\+s%C4%83n\+m%E1%BB%93i|%EC%8A%A4%EB%84%A4%EC%9D%B4%ED%81%AC|%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%87%E0%B8%B9|%E1%8B%A8%E1%8A%A5%E1%89%A3%E1%89%A5\+%E1%8C%A8%E1%8B%8B%E1%89%B3|%E0%A4%B8%E0%A4%BE%E0%A4%81%E0%A4%AA|%E1%80%99%E1%80%BC%E1%80%BD%E1%80%B1|w%C4%85%C5%BC|hra\+had|had%C3%AD\+hra|slange|ular).*$/
 // @match        https://*.google.com/fbx?fbx=snake_arcade*
 // @match        https://*.google.ad/fbx?fbx=snake_arcade*
@@ -394,7 +394,7 @@
 
 const IS_DEVELOPER_MODE = false;
 const VERSION = '1.0.9';//Gets set to version in build script
-const UPDATE_URL = 'https://github.com/DarkSnakeGang/GoogleSnakeModLoader/raw/main/build/snake-mod-loader-standard.user.js';//Gets set from build script
+const UPDATE_URL = 'https://github.com/Makki3608/GSMLfork/raw/main/build/snake-mod-loader-standard.user.js';//Gets set from build script
 
 //External config that determines which mods the modloader has
 let externalConfig = {
@@ -410,7 +410,7 @@ let externalConfig = {
 
     //Make a synchronous request for modInfo JSON file
     let req = new XMLHttpRequest();
-    req.open('GET', 'https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeModLoader/main/build/mod-info.json', false);
+    req.open('GET', 'https://raw.githubusercontent.com/Makki3608/GSMLfork/main/build/mod-info.json', false);
     req.onload = function() {
       if(this.status === 200) {
         try {
@@ -426,12 +426,12 @@ let externalConfig = {
           externalConfig.hasError = true;
         }
       } else {
-        console.error(`Loading external config from https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeModLoader/main/build/mod-info.json returned non-200 status. Received: ${this.status}`);
+        console.error(`Loading external config from https://raw.githubusercontent.com/Makki3608/GSMLfork/main/build/mod-info.json returned non-200 status. Received: ${this.status}`);
         externalConfig.hasError = true;
       }
     };
     req.onerror = function(event) {
-      console.error('Error when attempting to retrieve external config from https://raw.githubusercontent.com/DarkSnakeGang/GoogleSnakeModLoader/main/build/mod-info.json');
+      console.error('Error when attempting to retrieve external config from https://raw.githubusercontent.com/Makki3608/GSMLfork/main/build/mod-info.json');
       console.log(event);
       externalConfig.hasError = true;
     };
@@ -676,17 +676,17 @@ let addModSelectorPopup = function() {
       <div id="snake-error-message" style="font-family: helvetica, sans-serif;color: #f44336;margin-top: 2px;display: ${window.showSnakeErrMessage ? 'block' : 'none'};">
         Error changing snake code.
         <br>
-        <a href="https://github.com/DarkSnakeGang/GoogleSnakeModLoader/blob/main/docs/mod_errors.md" target="_blank" style="color: var(--mod-loader-link-font-col);">Why does this happen?</a>
+        <a href="https://github.com/Makki3608/GSMLfork/blob/main/docs/mod_errors.md" target="_blank" style="color: var(--mod-loader-link-font-col);">Why does this happen?</a>
       </div>
       <div id="code-not-found-message" style="font-family: helvetica, sans-serif;color: #f44336;margin-top: 2px;display: none;">
         Code not found after 4 seconds.
         <br>
-        <a href="https://github.com/DarkSnakeGang/GoogleSnakeModLoader/blob/main/docs/code_not_found_yet.md" target="_blank" style="color: var(--mod-loader-link-font-col);">Is it not working?</a>
+        <a href="https://github.com/Makki3608/GSMLfork/blob/main/docs/code_not_found_yet.md" target="_blank" style="color: var(--mod-loader-link-font-col);">Is it not working?</a>
       </div>
       <div id="config-not-loaded-message" style="font-family: helvetica, sans-serif;color: #f44336;margin-top: 2px;display: none;">
         Error: Failed to load external configuration.
         <br>
-        <a href="https://github.com/DarkSnakeGang/GoogleSnakeModLoader/blob/main/docs/config_not_loaded.md" target="_blank" style="color: var(--mod-loader-link-font-col);">What does this mean?</a>
+        <a href="https://github.com/Makki3608/GSMLfork/blob/main/docs/config_not_loaded.md" target="_blank" style="color: var(--mod-loader-link-font-col);">What does this mean?</a>
       </div>
   `;
 
@@ -762,9 +762,9 @@ let addModSelectorPopup = function() {
   const modSelectorModal = `
   <div id="mod-selector-dialogue" style="display: block;margin:40px auto;padding:10px;border: 1px solid var(--mod-loader-thin-border);width:550px;background-color: var(--mod-loader-main-bg) !important;border-radius:5px;-webkit-box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.24);box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 20%);font-family: helvetica, sans-serif;">
     <div style="display: flex;justify-content: space-between;align-items: center;margin: 7px 0px 15px 0px;border: 2px solid var(--mod-loader-title-border);background-color: var(--mod-loader-title-bg);border-radius: 2px;">
-      <span><a target="_blank" href="https://github.com/DarkSnakeGang"><img title="DarkSnakeGang github" style="margin-left:3px; margin-top:2px" src="/logos/fnbx/snake_arcade/v3/speed_00.png" alt="" height="34"></a></span>
+      <span><a target="_blank" href="https://github.com/Makki3608"><img title="DarkSnakeGang github" style="margin-left:3px; margin-top:2px" src="/logos/fnbx/snake_arcade/v3/speed_00.png" alt="" height="34"></a></span>
       <h1 style="font-size: 2em;font-weight: bold;font-family: &quot;Century Gothic&quot;, sans-serif;text-align: center;color: #4674e9;margin-top: 0;margin-bottom: 0;">Snake Mod Loader</h1>
-      <span><a target="_blank" href="https://discord.gg/NA6vHg62An"><img title="Discord server" src="https://github.com/DarkSnakeGang/GoogleSnakeIcons/blob/main/Extras/Discord.png?raw=true" width="35px" style="margin-left: 3px; margin-right: 5px; position: relative; top: 2px;"></a></span>
+      <span><a target="_blank" href="https://discord.gg/NA6vHg62An"><img title="Discord server" src="https://github.com/Makki3608/GSMLfork/blob/main/Extras/Discord.png?raw=true" width="35px" style="margin-left: 3px; margin-right: 5px; position: relative; top: 2px;"></a></span>
     </div>
     <div id="main-panel" style="display: flex;justify-content: start;">
       <div id="mod-options" style="flex: 45%;min-height: 115px;">
@@ -785,7 +785,7 @@ let addModSelectorPopup = function() {
           <label style="color:var(--mod-loader-font-col) !important"><input id="hide-indicator" type="checkbox">Auto-hide mod indicator (h to toggle)</label><br>
           <!--<label style="color:var(--mod-loader-font-col) !important"><input id="hidden-mod-toggle" type="checkbox">Show early access mods</label><br>-->
           <label style="color:var(--mod-loader-font-col) !important"><input id="dark-mod-theme" type="checkbox">Dark mod loader theme</label><br>
-          <span><img src="https://github.com/DarkSnakeGang/GoogleSnakeIcons/blob/main/Extras/Discord.png?raw=true" width="16px" style="margin-left: 3px; margin-right: 5px; position: relative; top: 2px;"><a target="_blank" href="https://discord.gg/NA6vHg62An" style="color:var(--mod-loader-link-font-col)">Discord</a></span><br>
+          <span><img src="https://github.com/Makki3608/GSMLfork/blob/main/Extras/Discord.png?raw=true" width="16px" style="margin-left: 3px; margin-right: 5px; position: relative; top: 2px;"><a target="_blank" href="https://discord.gg/NA6vHg62An" style="color:var(--mod-loader-link-font-col)">Discord</a></span><br>
           ${customUrlOptions}
         </div>
         <div id="settings-wrapper-2">
@@ -841,7 +841,7 @@ let addModSelectorPopup = function() {
 
   let hideEndScreenImg = document.createElement('img');
   hideEndScreenImg.style = "position: absolute;left: 10px;top: 10px;cursor: pointer; height:20px; width:auto;";
-  hideEndScreenImg.src = "https://github.com/DarkSnakeGang/GoogleSnakeIcons/blob/main/ToggleDeathscreen/EyeIcon.png?raw=true";
+  hideEndScreenImg.src = "https://github.com/Makki3608/GSMLfork/blob/main/ToggleDeathscreen/EyeIcon.png?raw=true";
   hideEndScreenImg.title = "Click to hide. Click anywhere to bring back";
   hideEndScreenImg.id = "death-screen-toggle";
   let firstMenuScreen = document.getElementsByClassName('T7SB3d')[0];
