@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         GSML fork (Standard)
-// @namespace    https://github.com/DarkSnakeGang
+// @namespace    https://github.com/Makki3608
 // @version      1.0.9
 // @description  Allows you to run multiple different google snake mods
 // @author       DarkSnakeGang (https://github.com/DarkSnakeGang)
