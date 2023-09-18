@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Google Snake Mod Loader (Standard)
+// @name         GSML fork (Standard)
 // @namespace    https://github.com/DarkSnakeGang
 // @version      1.0.9
 // @description  Allows you to run multiple different google snake mods
